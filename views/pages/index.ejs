@@ -8,5 +8,22 @@
 </head>
 <body>
     <p> heloooo</p>
+    <%= booksNum %> 
+    <ul>
+        <%  DBresult.forEach(book =>{ %>
+        <li>
+            <img src=<%= book.thumbnail %> />
+        </li>
+        <li>
+            <%= book.title %>
+        </li>
+        <li>
+            <%= book.authorname %>
+        </li>
+        <li>
+            <%= book.description %>
+        </li>
+        <%  }) %>
+    </ul>
 </body>
 </html>

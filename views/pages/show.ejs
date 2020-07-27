@@ -22,8 +22,24 @@
         <li>
             <%= book.description %>
         </li>
-        <%  }) %>
+
     </ul>
+
+    <form action="/book" method="POST" class="hide_form">
+        <label for="title">title:</label><br>
+        <input type="text" id="tilte" name="title" value="<%= book.title %>"><br>
+      
+        <label for="identifier">identifier</label><br>
+        <input type="text" id="identifier" name="identifier" value="<%= book.identifier %>"><br><br>
+        <label for="thumbnail">image URL</label><br>
+        <input type="text" id="thumbnail" name="thumbnail" value="<%= book.thumbnail %>"><br><br>
+        <label for="description">description</label><br>
+        <input type="text" id="description" name="description" value=" <%= book.description %>"><br><br><br><br>
+      
+        <button>add to database</button>
+    </form>
+    <%  }) %>
+    
 </body>
 
 </html>

@@ -9,7 +9,7 @@ const ejs = require('ejs');
 
 let PORT = process.env.PORT || 3030;
 let app = express();
-let client = new pg.Client(process.env.DB_URL);
+let client = new pg.Client(process.env.DATABASE_URL);
 
 app.set('view engine', 'ejs');
 app.set("views", ["views/pages", "views/pages/searches"]);
